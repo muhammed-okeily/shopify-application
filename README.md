@@ -1,16 +1,14 @@
-# buying
+# Shopify Application
 
-A new Flutter project.
+##E-Commerce app  with admin panel
 
-## Getting Started
+![Login&Signup](assets/Login&Signup.jpeg)
+![home User](assets/homeUser.jpeg)
+![Prduct Details](assets/PrductDetails.jpeg)
+![Cart](assets/Cart.jpeg)
+![check out](assets/checkout.jpeg)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![admin Panel](assets/adminPanel.jpeg)
+![Orders](assets/Orders.jpeg)
+![Confirm Order](assets/ConfirmOrder.jpeg)
+![Edit Order](assets/EditOrder.jpeg) 
