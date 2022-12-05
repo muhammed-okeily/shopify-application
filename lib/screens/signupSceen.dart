@@ -2,6 +2,7 @@
 
 import 'package:animate_do/animate_do.dart';
 import 'package:buying/constants.dart';
+import 'package:buying/models/UserModel.dart';
 import 'package:buying/provider/modelhud.dart';
 import 'package:buying/screens/user/HomeScreen.dart';
 import 'package:buying/screens/LoginScreen.dart';
@@ -19,7 +20,7 @@ import 'package:provider/provider.dart';
 class SignUpScreen extends StatelessWidget {
   final GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   static String id = 'SignUpScreen';
-  String? email, password;
+  String? email, password, name;
   final auth = Auth();
   @override
   Widget build(BuildContext context) {
@@ -79,7 +80,9 @@ class SignUpScreen extends StatelessWidget {
                 height: height * .1,
               ),
               CustomTextField(
-                  onClick: (value) {},
+                  onClick: (value) {
+                    name = value;
+                  },
                   hint: 'Enter your name ..',
                   icon: Icons.person_sharp),
               SizedBox(
@@ -120,6 +123,9 @@ class SignUpScreen extends StatelessWidget {
                         try {
                           final authResult = await auth.signUp(
                               email!.trim(), password!.trim());
+
+                          auth.addUser(Users(
+                              uName: name, uEmail: email, uPassword: password));
                           modelhud.changeisLoading(false);
                           Navigator.pushNamed(context, HomeScreen.id);
                         } catch (e) {
